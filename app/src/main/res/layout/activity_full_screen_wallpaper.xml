@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FullScreenWallpaper"
+    android:background="@android:color/black">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:elevation="5dp"
+        android:text="Set Wallpaper"
+        android:id="@+id/btnSetWallpaper"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/custom_button"
+        android:onClick="SetWallpaperEvent"
+        android:layout_marginBottom="10dp"
+        />
+
+    <Button
+        android:id="@+id/btnDownloadWallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSetWallpaper"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="67dp"
+        android:elevation="5dp"
+        android:background="@drawable/custom_button"
+        android:onClick="DownloadWallpaperEvent"
+        android:padding="15dp"
+        android:text="Download" />
+
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentRight="true"
+       android:text="share"
+       android:layout_marginTop="20dp"
+       android:layout_marginRight="20dp"
+       android:background="@drawable/share_button"
+       android:onClick="ShareImage"/>
+</RelativeLayout>
